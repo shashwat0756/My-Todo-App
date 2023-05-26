@@ -3,7 +3,7 @@ import function
 todos = function.get_todos()
 
 def add_todo():
-    todo =  st.session_state.get("new_todo", "").strip()
+    todo =  st.session_state.get("new_todo", "").strip() + "\n"
     if todo not in todos:
        todos.append(todo)
        function.write_todos(todos)
